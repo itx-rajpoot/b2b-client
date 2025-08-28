@@ -1,0 +1,88 @@
+@processColor: #00ABFF;
+@completedColor: #50DF5B;
+@cancelledColor: #F23868;
+
+.orders-card-wrapper {
+  display: flex;
+  max-width: 300px;
+}
+
+.orders-card-vertical {
+  height: 80px;
+  background-color: gray;
+  width: 6px;
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+}
+
+.orders-card {
+  width: calc(100% - 6px);
+  height: 80px;
+  border-radius: 8px;
+  border-left: none!important;
+  border-bottom-left-radius: 0px;
+  border-top-left-radius: 0px;
+  display: flex;
+  overflow: hidden;
+  box-shadow: rgb(255 255 255 / 8%) 0px 3px 8px;
+  cursor: pointer;
+  transition: all .1s linear;
+  background-color: #081B33;
+  border: 2px solid #081B33;
+}
+
+.orders-card-process {
+  color: @processColor;
+}
+.orders-card-completed {
+  color: @completedColor;
+}
+.orders-card-cancelled {
+  color: @cancelledColor;
+}
+.orders-card-process.orders-active {
+  border-color: @processColor;
+}
+.orders-card-completed.orders-active {
+  border-color: @completedColor;
+}
+.orders-card-cancelled.orders-active {
+  border-color: @cancelledColor;
+}
+
+.orders-active {
+  box-shadow: none;
+}
+
+.orders-card:hover {
+  background-color: #0e2541;
+}
+
+.orders-card-vertical-process {
+  background-color: @processColor;
+}
+.orders-card-vertical-completed {
+  background-color: @completedColor;
+}
+.orders-card-vertical-cancelled {
+  background-color: @cancelledColor;
+}
+
+.orders-card-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  height: 80px;
+  justify-content: center;
+  width: 100%;
+  padding: 0px 20px;
+}
+
+.orders-card-info-title {
+  font-size: 14px;
+}
+
+.orders-card-info-stat {
+  font-size: 16px;
+  font-weight: bold;
+}

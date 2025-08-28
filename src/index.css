@@ -1,0 +1,15 @@
+@font-face {
+  font-family: "Gibson";
+  src: local("Gibson"), url("./assets/fonts/Gibson-Regular.ttf") format("truetype");
+}
+
+body {
+  margin: 0;
+  font-family: "Gibson"!important;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}

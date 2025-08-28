@@ -1,0 +1,90 @@
+.numpad-container {
+  max-width: 260px;
+  width: 100%;
+  padding: 12px 0px;
+  margin: auto;
+}
+.numpad-container span.title {
+  font-weight: 700;
+  letter-spacing: 2px;
+  display: block;
+  text-align: center;
+}
+.numpad-container .number {
+  width: 100%;
+  font-size: 0;
+  text-align: center;
+}
+.numpad-container .number span {
+  font-size: 24px;
+  color: rgba(0, 0, 0, 0.85);
+  display: inline-block;
+  width: 33%;
+  text-align: center;
+  margin-bottom: 16px;
+}
+.numpad-container .number span.call-button {
+  opacity: 0;
+  transition: 250ms;
+}
+.numpad-container .number span.call-button.show {
+  opacity: 1;
+}
+.numpad-container .number span.call-button img {
+  display: inline-block;
+  vertical-align: middle;
+}
+.numpad-container .number span i {
+  display: inline-block;
+  width: 60px;
+  height: 60px;
+  line-height: 60px;
+  background: #f0f0f0;
+  cursor: pointer;
+  border-radius: 100%;
+  border: 1px solid #d9d9d9;
+  transition: 250ms;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-box-shadow: 8px 8px 24px 0px rgba(132, 132, 132, 0.09);
+  -moz-box-shadow: 8px 8px 24px 0px rgba(132, 132, 132, 0.09);
+  box-shadow: 8px 8px 24px 0px rgba(132, 132, 132, 0.09);
+}
+.numpad-container .number span i.delete {
+  background: transparent;
+  border: none;
+  box-shadow: 0 0 0 0;
+  -webkit-box-shadow: 0 0 0 0;
+  -moz-box-shadow: 0 0 0 0;
+  -ms-box-shadow: 0 0 0 0;
+}
+.numpad-container .number span i.delete img {
+  display: inline-block;
+  vertical-align: middle;
+}
+.numpad-container .number span:hover i {
+  color: black;
+}
+.numpad-container .number span:active i {
+  transform: translateY(1px);
+  -webkit-box-shadow: 5px 5px 24px 0px rgba(132, 132, 132, 0.18);
+  -moz-box-shadow: 5px 5px 16px 0px rgba(132, 132, 132, 0.18);
+  box-shadow: 5px 5px 16px 0px rgba(132, 132, 132, 0.18);
+}
+.numpad-container .number span:active i.delete {
+  box-shadow: 0 0 0 0;
+  -webkit-box-shadow: 0 0 0 0;
+  -moz-box-shadow: 0 0 0 0;
+  -ms-box-shadow: 0 0 0 0;
+  transform: translateY(0px);
+}
+.numpad-container .number span:active i.delete svg {
+  transition: 250ms;
+}
+.numpad-container .number span:active i.delete:active svg {
+  transform: translateY(2px);
+}

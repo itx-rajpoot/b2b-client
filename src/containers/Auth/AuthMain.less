@@ -1,0 +1,150 @@
+@cardBorderRadius: 12px;
+@darkThemeColor: #081B33;
+
+#auth_main {
+  height: 100vh;
+  overflow-x: hidden;
+  background-image: url("../../images/auth_bg.jpeg");
+  background-size: cover;
+}
+
+.auth_container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #00000045;
+  padding: 50px 0px;
+}
+
+.auth_card {
+  min-height: 520px;
+  width: 75%;
+  min-width: 400px;
+  max-width: 1000px;
+  border-radius: @cardBorderRadius;
+  transition: all 100ms cubic-bezier(0, 0, .58, 1);
+}
+.auth_card_confirmation {
+  text-align: center;
+  padding: 40px 80px;
+  min-height: 520px;
+  width: 75%;
+  border-radius: @cardBorderRadius;
+  background-color: rgba(255, 255, 255, 0.955);
+  transition: all 100ms cubic-bezier(0, 0, .58, 1);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.auth_card__signup {
+  // border-top-left-radius: 0px;
+  // border-bottom-right-radius: 0px;
+}
+.auth_card__login {
+  // border-top-right-radius: 0px;
+  // border-bottom-left-radius: 0px;
+}
+.auth_card__forgot {
+  padding: 40px 80px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  background: @darkThemeColor;
+  border-radius: @cardBorderRadius;
+}
+
+.auth_content {
+  padding: 40px;
+  background: @darkThemeColor;
+}
+.auth_card__signup .auth_content {
+  border-top-left-radius: @cardBorderRadius;
+  border-bottom-left-radius: @cardBorderRadius;
+}
+.auth_card__login .auth_content {
+  border-top-right-radius: @cardBorderRadius;
+  border-bottom-right-radius: @cardBorderRadius;
+}
+
+.auth_sider_content {
+  padding: 60px 12px 40px;
+}
+.auth_sider {
+  background-color: @darkThemeColor;
+}
+.auth_sider .auth_sider_bg {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+}
+.auth_sider .auth_sider_bg img{
+  width: 100%;
+  height: 100%;
+}
+.auth_card__signup .auth_sider_bg img, .auth_card__signup .auth_sider, .auth_card__signup .auth_sider_bg {
+  border-top-right-radius: @cardBorderRadius;
+  border-bottom-right-radius: @cardBorderRadius;
+}
+.auth_card__login .auth_sider_bg img, .auth_card__login .auth_sider, .auth_card__login .auth_sider_bg {
+  border-top-left-radius: @cardBorderRadius;
+  border-bottom-left-radius: @cardBorderRadius;
+}
+
+.auth_card__signup .ant-form-item-label, .auth_card__login .ant-form-item-label {
+  padding-bottom: 0px;
+}
+.auth_card__signup .ant-form-item {
+  margin-bottom: 6px;
+}
+.auth_card__signup .ant-form-item-explain {
+  height: 0px;
+  min-height: 0px;
+}
+
+#auth_main .auth_card:not(.auth_card__login) input#password {
+  font-size: 24px;
+  text-align: center;
+  letter-spacing: 4px;
+}
+
+@media (max-width: 768px){
+  .auth_container {
+    padding: 25px 0px;
+  }
+  .auth_card {
+    width: 90%;
+  }
+  .auth_card__signup .auth_content, .auth_card__login .auth_content {
+    border-radius: 0px;
+    border-top-left-radius: @cardBorderRadius;
+    border-top-right-radius: @cardBorderRadius;
+  }
+  .auth_card__signup .auth_sider_bg img, .auth_card__signup .auth_sider, .auth_card__signup .auth_sider_bg, .auth_card__login .auth_sider_bg img, .auth_card__login .auth_sider, .auth_card__login .auth_sider_bg {
+    border-radius: 0px;
+    border-bottom-left-radius: @cardBorderRadius;
+    border-bottom-right-radius: @cardBorderRadius;
+  }
+}
+@media (max-width: 576px){
+  .auth_container {
+    padding: 50px 0px;
+  }
+  .auth_card {
+    width: 100%;
+  }
+  .auth_content {
+    padding: 20px 0px;
+  }
+  .auth_sider_content {
+    padding: 60px 0px 40px;
+  }
+  .auth_card__signup .auth_content, .auth_card__login .auth_content {
+    border-radius: 0px;
+  }
+  .auth_card__signup .auth_sider_bg img, .auth_card__signup .auth_sider, .auth_card__signup .auth_sider_bg, .auth_card__login .auth_sider_bg img, .auth_card__login .auth_sider, .auth_card__login .auth_sider_bg {
+    border-radius: 0px;
+  }
+}

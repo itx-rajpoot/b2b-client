@@ -1,0 +1,22 @@
+.covid-policy-img-container {
+  width: 128px;
+  height: 128px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #EBEAEA;
+}
+.covid-policy-img-container svg {
+  height: 64px;
+  width: 64px;
+}
+.covid-policy-img-container svg path:not(#facePath) {
+  fill: #C0C0C0;
+}
+.covid-policy-img-container svg path#facePath {
+  fill: #D3D3D3;
+}
+.covid-policy-img-container.covid-policy-checked svg path:not(#facePath) {
+  fill: #797979;
+}
