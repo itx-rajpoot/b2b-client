@@ -26,7 +26,7 @@ function App() {
             .getIdTokenResult()
             .then((idTokenResult) => {
               if (idTokenResult.claims.venue || idTokenResult.claims.admin) {
-                console.log(idTokenResult.claims.venue ? 'is a venue' : 'is admin');
+                console.log(idTokenResult.claims.venue ? 'is a Restaurant' : 'is admin');
                 dispatch(setCurrentUser(user.uid, idTokenResult.claims.admin));
                 setAuthorizationToken(idTokenResult.token);
                 setLoading(false);

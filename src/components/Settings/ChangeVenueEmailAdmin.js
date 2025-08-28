@@ -85,7 +85,7 @@ export default function ChangeVenueEmailAdmin({ venueId, venueEmail }) {
       >
         {step === 0 ? (
           <div style={{ textAlign: 'center' }}>
-            <h1>Hello Admin! Do you want to change this venue's email?</h1>
+            <h1>Hello Admin! Do you want to change this venue/Restaurant's email?</h1>
             <h3>The current email used to log in is</h3>
             <h3><strong><em>{venueEmail}</em></strong></h3>
             <br/>
@@ -106,7 +106,7 @@ export default function ChangeVenueEmailAdmin({ venueId, venueEmail }) {
               label="Enter the new email"
               name="email"
               rules={[
-                { required: true, message: "Please enter the venue's new email" },
+                { required: true, message: "Please enter the venue/Restaurant's new email" },
                 { type: 'email', message: "Please enter a valid email!" },
               ]}
             >
@@ -116,7 +116,7 @@ export default function ChangeVenueEmailAdmin({ venueId, venueEmail }) {
         ) : step === 2 ? (
           <Result
             status="success"
-            title="The venue's email have been successfully changed"
+            title="The venue/Restaurant's email have been successfully changed"
             subTitle="No need to confirm this action. You are an admin!"
             extra={[
               <Button key="close" type="primary" onClick={onCancel}>Close</Button>,

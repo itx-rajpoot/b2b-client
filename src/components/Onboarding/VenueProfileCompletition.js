@@ -38,7 +38,7 @@ export default function VenueProfileCompletition({ venue, width = 150 }) {
             ))}
           </ul>
         }
-        title="Venue Profile Completition"
+        title="Restaurant Profile Completition"
         trigger="click"
       >
         <Progress percent={Math.round((onboarding.progress / 7) * 100)} size="small" />

@@ -111,7 +111,7 @@ export default function VenueInfo({ venue, onAdmin }) {
       firebase
         .uploadFile(venueImagesPath, file.originFileObj)
         .then(function ({ uploadTaskSnaphot }) {
-          console.log('Uploaded venue image to Firebase Storage.', uploadTaskSnaphot);
+          console.log('Uploaded venue/Restaurant image to Firebase Storage.', uploadTaskSnaphot);
           uploadTaskSnaphot.ref
             .getDownloadURL()
             .then(async function (url) {
@@ -254,7 +254,7 @@ export default function VenueInfo({ venue, onAdmin }) {
           </Col>
           <Col md={8}>
             <div className="profile-form-card">
-              <Form.Item name={'name'} label="Venue Name" rules={[{ required: true }]}>
+              <Form.Item name={'name'} label="Venue/Restaurant Name" rules={[{ required: true }]}>
                 <Input placeholder="DineGo" disabled={loading === 'info'} />
               </Form.Item>
               <Form.Item name={'short_name'} label="Short name (optional)">
@@ -280,17 +280,20 @@ export default function VenueInfo({ venue, onAdmin }) {
               <Form.Item name={'category'} label="Type of venue">
                 <Select
                   mode="multiple"
-                  placeholder="Select venue type"
+                  placeholder="Select venue/Restaurant type"
                   disabled={loading === 'info'}
                 >
-                  <Option value="Bar">Bar</Option>
-                  <Option value="Breweries">Breweries</Option>
-                  <Option value="Gamebar">Gamebar</Option>
-                  <Option value="Hybrid">Hybrid</Option>
+                  <Option value="Cafe">Cafe</Option>
+                  <Option value="Restaurant">Restaurant</Option>
+                  <Option value="Food Court">Food Court</Option>
                   <Option value="Lounge">Lounge</Option>
-                  <Option value="Music hall">Music hall</Option>
-                  <Option value="Nightclub">Nightclub</Option>
-                  <Option value="Sports bar">Sports bar</Option>
+                  <Option value="Hotel Restaurant">Hotel Restaurant</Option>
+                  <Option value="Family Restaurant">Family Restaurant</Option>
+                  <Option value="Tea House">Tea House</Option>
+                  <Option value="Street Food Spot">Street Food Spot</Option>
+                  <Option value="Buffet">Buffet</Option>
+                  <Option value="Fast Food">Fast Food</Option>
+
                 </Select>
               </Form.Item>
               <Form.Item name={'price'} label="Average price">
@@ -311,31 +314,32 @@ export default function VenueInfo({ venue, onAdmin }) {
                   disabled={loading === 'info'}
                   allowClear
                 >
-                  <Option value="0">Brookhaven</Option>
-                  <Option value="1">Midtown</Option>
-                  <Option value="2">Little 5 Points/Candler Park</Option>
-                  <Option value="3">Downtown ATL</Option>
-                  <Option value="4">Piedmont</Option>
-                  <Option value="5">Lindberg</Option>
-                  <Option value="6">Buckhead</Option>
-                  <Option value="7">North Buckhead</Option>
-                  <Option value="8">Peachtree</Option>
-                  <Option value="9">Midtown Central</Option>
-                  <Option value="10">Old Fourth Ward</Option>
-                  <Option value="11">East Atlanta Village</Option>
-                  <Option value="12">Downtown Decatur/North Decatur</Option>
-                  <Option value="13">Inman Park</Option>
-                  <Option value="14">Toco Hills</Option>
-                  <Option value="15">Virginia Highlands</Option>
-                  <Option value="16">Sweet Auburn</Option>
-                  <Option value="17">Edgewood</Option>
-                  <Option value="18">Home Park</Option>
-                  <Option value="19">Other</Option>
-                  <Option value="20">West End</Option>
-                  <Option value="21">Castleberry Hill</Option>
-                  <Option value="22">Grant Park</Option>
+                  <Option value="0">Gulberg, Lahore</Option>
+                  <Option value="1">DHA, Karachi</Option>
+                  <Option value="2">F-6, Islamabad</Option>
+                  <Option value="3">Clifton, Karachi</Option>
+                  <Option value="4">Johar Town, Lahore</Option>
+                  <Option value="5">G-11, Islamabad</Option>
+                  <Option value="6">Saddar, Karachi</Option>
+                  <Option value="7">Bahria Town, Faisalabad</Option>
+                  <Option value="8">Model Town, Lahore</Option>
+                  <Option value="9">Gulshan-e-Iqbal, Karachi</Option>
+                  <Option value="10">Faisalabad Cantt</Option>
+                  <Option value="11">Blue Area, Islamabad</Option>
+                  <Option value="12">Shadman, Lahore</Option>
+                  <Option value="13">Malir, Karachi</Option>
+                  <Option value="14">Multan Cantt</Option>
+                  <Option value="15">Peshawar Saddar</Option>
+                  <Option value="16">Quetta Cantt</Option>
+                  <Option value="17">PECHS, Karachi</Option>
+                  <Option value="18">I-8, Islamabad</Option>
+                  <Option value="19">F-7, Islamabad</Option>
+                  <Option value="20">F-8, Islamabad</Option>
+                  <Option value="21">DHA Phase 6, Lahore</Option>
+                  <Option value="22">Other</Option>
                 </Select>
               </Form.Item>
+
             </div>
           </Col>
           <Col md={8}>

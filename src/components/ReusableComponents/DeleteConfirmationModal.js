@@ -71,14 +71,14 @@ class DeleteConfirmationModal extends Component {
           <Button key="close" disabled={loadingConfirm} onClick={this.handleCancel}>
             {cancelText}
           </Button>,
-          <Button key="ok" disabled={okDisabled || input !== "delete this venue"} loading={loadingConfirm} type={"danger"} onClick={this.handleConfirm}>
+          <Button key="ok" disabled={okDisabled || input !== "delete this venue/Restaurant"} loading={loadingConfirm} type={"danger"} onClick={this.handleConfirm}>
             {okText}
           </Button>
         ]}
       >
         <div>{content}</div>
         <p style={{ paddingTop: 12 }}>
-          To confirm this action, please enter "<strong>delete this venue</strong>" on the following field:
+          To confirm this action, please enter "<strong>delete this venue/Restaurant</strong>" on the following field:
         </p>
         <Input onChange={this.handleDeleteInput} value={this.state.input}/>
       </Modal>

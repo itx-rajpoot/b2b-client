@@ -118,11 +118,11 @@ const AddReward = ({ edit, item }) => {
             <Col md={12} xs={24}>
               <Form.Item
                 name="venue"
-                label="Venue name"
+                label="Venue/Restaurant name"
                 rules={[
                   {
                     required: true,
-                    message: 'Please enter the venue name!',
+                    message: 'Please enter the venue/Restaurant name!',
                   },
                 ]}
               >
